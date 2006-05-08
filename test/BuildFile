@@ -1,0 +1,27 @@
+<use name=boost>
+<use name=root>
+
+<use name=FWCore/Framework>
+<use name=Foundation/PluginManager>
+<use name=FWCore/ParameterSet>
+
+<use name=Geometry/Records>
+<use name=Geometry/CommonDetUnit>
+<use name=Geometry/TrackerGeometryBuilder>
+
+<use name=CommonTools/Clustering>
+
+<use name=DataFormats/TrackerRecHit2D>
+<use name=RecoTracker/TkHitPairs>
+<use name=RecoTracker/TkTrackingRegions>
+<use name=RecoPixelVertexing/PixelTriplets>
+<use name=RecoPixelVertexing/PixelTrackFitting>
+<use name=RecoPixelVertexing/PixelVertexFinding>
+
+
+
+<library file="PixelVertexTest.cc" name="PixelVertexTest">
+ <use name=FWCore/Framework>
+ <flags SEAL_PLUGIN_NAME="PixelVertexTest">
+</library>
+
