@@ -9,7 +9,7 @@
 <use name=Geometry/CommonDetUnit>
 <use name=Geometry/TrackerGeometryBuilder>
 
-<use name=CommonTools/Clustering>
+<use name=CommonTools/Clustering1D>
 
 <use name=DataFormats/TrackerRecHit2D>
 <use name=RecoTracker/TkHitPairs>
