@@ -1,9 +1,6 @@
   include "MagneticField/Engine/data/volumeBasedMagneticField.cfi"
+  include "Geometry/TrackerSimData/data/trackerSimGeometryXML.cfi"
 
-  es_source = XMLIdealGeometryESSource {
-    FileInPath GeometryConfiguration="Geometry/TrackerSimData/data/trackerSimConfiguration.xml"
-    string rootNodeName = ""
-  }
   es_module = TrackerGeometricDetESModule {}
   es_module = TrackerRecoGeometryESProducer {}
   es_module = TrackerDigiGeometryESModule {}
