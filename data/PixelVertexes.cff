@@ -1,0 +1,14 @@
+  include "MagneticField/Engine/data/volumeBasedMagneticField.cfi"
+
+  es_source = XMLIdealGeometryESSource {
+    FileInPath GeometryConfiguration="Geometry/TrackerSimData/data/trackerSimConfiguration.xml"
+    string rootNodeName = ""
+  }
+  es_module = TrackerGeometricDetESModule {}
+  es_module = TrackerRecoGeometryESProducer {}
+  es_module = TrackerDigiGeometryESModule {}
+
+  es_module = PixelFitterByConformalMappingAndLineESProducer{ }
+  es_module = PixelFitterByHelixProjectionsESProducer{ }
+
+  include "RecoPixelVertexing/PixelVertexFinding/data/PixelVertexes.cfi"
