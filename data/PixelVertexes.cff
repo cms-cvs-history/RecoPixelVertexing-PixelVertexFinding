@@ -1,4 +1,7 @@
   include "MagneticField/Engine/data/volumeBasedMagneticField.cfi"
-  include "Geometry/TrackerSimData/data/trackerSimGeometryXML.cfi"
+#
+# chage ... TB
+#  include "Geometry/TrackerSimData/data/trackerSimGeometryXML.cfi"
+include "Geometry/CMSCommonData/data/cmsIdealGeometryXML.cfi" 
 
   include "RecoPixelVertexing/PixelVertexFinding/data/PixelVertexes.cfi"
