@@ -1,6 +1,6 @@
-  module PixelVertexes = PixelVertexProducer{
+  module pixelVertices = PixelVertexProducer{
     int32 Verbosity = 0
-    string TrackCollection = "PixelTracks"
+    string TrackCollection = "pixelTracks"
     string Finder = "DivisiveVertexFinder"
     bool UseError = true
     bool WtAverage = true
