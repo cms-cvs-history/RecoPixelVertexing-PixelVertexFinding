@@ -1,4 +1,0 @@
-  module pixelTracks = PixelTrackProducer{
-//    string Fitter = "PixelFitterByConformalMappingAndLine" 
-    string Fitter = "PixelFitterByHelixProjections" 
-  }
