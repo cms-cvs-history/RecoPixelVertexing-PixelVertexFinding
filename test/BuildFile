@@ -27,6 +27,6 @@
 
 <library file="PixelVertexTest.cc" name="PixelVertexTest">
  <use name=FWCore/Framework>
- <flags SEAL_PLUGIN_NAME="PixelVertexTest">
+ <flags EDM_PLUGIN=1>
 </library>
 
