@@ -6,7 +6,7 @@
     bool WtAverage = true
     double ZOffset = 5.0
     double ZSeparation = 0.05
-    int32 NTrkMin = 5
+    int32 NTrkMin = 2
     double PtMin = 1.0
     bool Method2 = true
   }
