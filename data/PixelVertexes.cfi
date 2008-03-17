@@ -1,6 +1,6 @@
   module pixelVertices = PixelVertexProducer{
     int32 Verbosity = 0
-    string TrackCollection = "pixelTracks"
+    InputTag TrackCollection = "pixelTracks"
     InputTag beamSpot = "offlineBeamSpot"
     string Finder = "DivisiveVertexFinder"
     bool UseError = true
