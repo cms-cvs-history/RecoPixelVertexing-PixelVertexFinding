@@ -45,7 +45,7 @@ void PixelVertexProducer::produce(edm::Event& e, const edm::EventSetup& es) {
 
   // First fish the pixel tracks out of the event
   edm::Handle<reco::TrackCollection> trackCollection;
-  std::string trackCollName = conf_.getParameter<std::string>("TrackCollection");
+  edm::InputTag trackCollName = conf_.getParameter<edm::InputTag>("TrackCollection");
   e.getByLabel(trackCollName,trackCollection);
   const reco::TrackCollection tracks = *(trackCollection.product());
   if (verbose_ > 0) edm::LogInfo("PixelVertexProducer") << ": Found " << tracks.size() << " tracks in TrackCollection called " << trackCollName << "\n";
@@ -91,7 +91,14 @@ void PixelVertexProducer::produce(edm::Event& e, const edm::EventSetup& es) {
       double z=(*vertexes)[i].z();
       double x=bs.x0()+bs.dxdz()*(z-bs.z0());
       double y=bs.y0()+bs.dydz()*(z-bs.z0()); 
-      (*vertexes)[i]=reco::Vertex( reco::Vertex::Point(x,y,z), (*vertexes)[i].error(),(*vertexes)[i].chi2() , (*vertexes)[i].ndof() , (*vertexes)[i].tracksSize());
+      reco::Vertex v( reco::Vertex::Point(x,y,z), (*vertexes)[i].error(),(*vertexes)[i].chi2() , (*vertexes)[i].ndof() , (*vertexes)[i].tracksSize());
+       //Copy also the tracks 
+       for (std::vector<reco::TrackBaseRef >::const_iterator it = (*vertexes)[i].tracks_begin();
+            it !=(*vertexes)[i].tracks_end(); it++) {
+            v.add( *it );
+       }
+      (*vertexes)[i]=v;
+
     }
   }
    else
